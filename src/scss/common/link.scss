@@ -1,0 +1,28 @@
+@use "../utils/vars";
+
+.link {
+  cursor: pointer;
+  color: vars.$purple-color;
+  &:hover {
+    text-decoration: underline;
+    border-bottom: none;
+  }
+  &.isWhite {
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+  }
+  &.isFalse {
+    border-bottom: 1px solid vars.$danger-color;
+    color: vars.$danger-color;
+  }
+  &.isTrue {
+    border-bottom: 1px solid vars.$success-color;
+    color: vars.$success-color;
+  }
+  // active link
+  &.isActive,
+  &.router-link-active,
+  &.router-link-exact-active {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,52 @@
+@use "sass:math";
+
+
+.row {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-bottom: 16px;
+  padding: 8px;
+}
+.col{
+  flex-direction: column;
+  margin-left: 16px;
+}
+.col:first-child{
+  margin-left: 0;
+}
+[class*=col-]:first-child{
+  margin-left: 0;
+}
+
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @extend .col;
+    width: math.div(1, 12) * $i * 100%;
+  }
+}
+
+$screens: (
+"1400": 1400,
+"1280": 1280,
+"1024": 1024,
+"768": 768,
+"640": 640,
+"480": 480,
+"320": 320
+);
+@each $key, $screen in $screens {
+  @media screen and (max-width: #{$screen}px) {
+    @for $i from 1 through 12 {
+      .col-#{$i}-#{$screen}{
+        width: math.div(1, 12) * $i * 100%;
+      }
+    }
+  }
+}

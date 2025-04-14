@@ -1,0 +1,57 @@
+$btn-border-radius: 1rem;
+$btn-border-radius-lg: 1.2rem;
+$btn-border-radius-sm: 0.8rem;
+
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 0.03rem;
+
+  padding: 0.8em 2em;
+  line-height: $btn-border-radius;
+  font-size: $btn-border-radius;
+  border-radius: $btn-border-radius;
+
+  &.btnSm{
+    padding: 0.5rem 0.5rem !important;
+    line-height: $btn-border-radius-sm !important;
+    font-size: $btn-border-radius-sm !important;
+    border-radius: $btn-border-radius-sm !important;
+    text-transform: capitalize;
+  }
+
+  &.btnLg{
+    line-height: $btn-border-radius-lg !important;
+    font-size: $btn-border-radius-lg !important;
+    border-radius: $btn-border-radius-lg !important;
+  }
+
+  // default btn
+  &.btnDefault {
+    color: #ffffff;
+    border: 1px solid #333333;
+    background-color: #333333;
+  }
+
+  // primary btn
+  &.btnPrimary {
+    color: #ffffff;
+    border: 1px solid #494ce8;
+    background-color: #494ce8;
+  }
+
+  // danger btn
+  &.btnDanger {
+    color: #ffffff;
+    border: 1px solid hsl(0, 48%, 48%);
+    background-color: #b53f3f;
+  }
+
+  &.btnWhite {
+    color: #333333;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+  }
+}
