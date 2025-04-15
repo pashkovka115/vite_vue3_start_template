@@ -1,4 +1,10 @@
 <template>
+  <div class="container">
+    <section>
+      <Messages/>
+    </section>
+  </div>
+
   <section class="text-center-line">
     <div class="card" style="width: 350px">
       <div class="card-body">
@@ -142,10 +148,11 @@
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import Modal from "@/components/UI/Modal.vue";
+import Messages from "@/components/Messages.vue";
 
 export default {
   name: "App",
-  components: {HelloWorld, Modal},
+  components: {Messages, HelloWorld, Modal},
   data() {
     return {
       counter: 0,
