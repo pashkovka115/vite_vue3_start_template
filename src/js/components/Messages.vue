@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import Message from "@/components/Message.vue";
-import message from "@/components/Message.vue";
+import Message from "@/js/components/Message.vue";
+// import message from "@/js/components/Message.vue";
 
 export default {
   components: {Message},

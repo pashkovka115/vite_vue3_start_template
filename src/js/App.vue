@@ -146,9 +146,9 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import Modal from "@/components/UI/Modal.vue";
-import Messages from "@/components/Messages.vue";
+import HelloWorld from "@/js/components/HelloWorld.vue";
+import Modal from "@/js/components/UI/Modal.vue";
+import Messages from "@/js/components/Messages.vue";
 
 export default {
   name: "App",

@@ -5,6 +5,13 @@ import path from "path";
 import babel from 'vite-plugin-babel';
 
 export default {
+    // base: './',
+    root: path.resolve(__dirname, 'src'),
+    publicDir: path.resolve(__dirname, 'src', 'copy_files'),
+    build: {
+        outDir: path.resolve(__dirname, 'dist'),
+        emptyOutDir: true
+    },
     plugins: [
         Inspect(),
         vue(),

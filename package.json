@@ -2,10 +2,11 @@
   "name": "vite_vue3_template",
   "private": true,
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --outDir dist --emptyOutDir",
+    "build": "vite build",
     "preview": "vite preview --open"
   },
   "devDependencies": {
