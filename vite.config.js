@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import autoprefixer from 'autoprefixer'
 import path from "path";
 import babel from 'vite-plugin-babel';
+import { watch } from "vite-plugin-watch"
 
 export default {
     // base: './',
@@ -16,6 +17,10 @@ export default {
         Inspect(),
         vue(),
         babel(),
+        watch({
+            pattern: path.resolve('src/copy_files/api/**/**'),
+            command: "copyfiles --up 2  src/copy_files/api/**/* admin/",
+        }),
     ],
     css: {
         postcss: {
